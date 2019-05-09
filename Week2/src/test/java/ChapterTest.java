@@ -14,6 +14,7 @@ public class ChapterTest {
         Chapter chapter = new Chapter(chapterName, chapterNum);
         boolean checkChap = chapter.violateChapterRules(chapterNum);
         //Return an exception
+        assertTrue(checkChap);
     }
 
     @Test

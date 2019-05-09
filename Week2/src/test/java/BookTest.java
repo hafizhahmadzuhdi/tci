@@ -42,6 +42,7 @@ public class BookTest {
         assertTrue(check);
     }
 
+    //Naming convention still be a matter for me
     @Test
     public void shouldGetTableOfContentsOfUnsortedChapters() throws DuplicateException, BookException{
         //Arrannge
