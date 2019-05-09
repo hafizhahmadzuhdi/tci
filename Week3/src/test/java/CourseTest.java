@@ -8,6 +8,7 @@ import Exception.*;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -15,6 +16,7 @@ import java.util.Date;
 public class CourseTest {
 
     private Course course;
+    private Course course2;
     SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 
     @Before
@@ -28,7 +30,7 @@ public class CourseTest {
     }
 
     @Test(expected = EnddateEarlierException.class)
-    public void shouldThrowExceptionWhileAddingTheLowerEndaDateThanTheStartDate(){
-
+    public void shouldThrowExceptionWhileAddingTheLowerEndaDateThanTheStartDate() throws ParseException, EnddateEarlierException {
+        course2 = new Course("Testing", formatter.parse("02-01-2019"), formatter.parse("01-01-2019"));
     }
 }

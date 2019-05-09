@@ -1,4 +1,5 @@
 import java.util.Date;
+import Exception.*;
 
 public class Course {
 
@@ -6,10 +7,15 @@ public class Course {
     private Date startDate;
     private Date endDate;
 
-    public Course(String name, Date startDate, Date endDate) {
+    public Course(String name, Date startDate, Date endDate) throws EnddateEarlierException {
+        if(endDate.before(startDate)){
+            throw new EnddateEarlierException();
+        }
+
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
+
     }
 
     public String getName() {
@@ -25,5 +31,7 @@ public class Course {
     public Date getEndDate() {
         return endDate;
     }
+
+
 
 }
