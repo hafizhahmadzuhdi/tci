@@ -7,9 +7,9 @@ public class Course {
     private Date startDate;
     private Date endDate;
 
-    public Course(String name, Date startDate, Date endDate) throws EnddateEarlierException {
+    public Course(String name, Date startDate, Date endDate) throws CourseDateException {
         if(endDate.before(startDate)){
-            throw new EnddateEarlierException();
+            throw new CourseDateException();
         }
 
         this.name = name;
@@ -31,6 +31,7 @@ public class Course {
     public Date getEndDate() {
         return endDate;
     }
+
 
 
 
