@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
           </set>
         </option>
+        <option name="useAutoImport" value="true" />
         <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
       <GradleProjectSettings>
@@ -29,6 +30,39 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/Week2" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Week2Fixed" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Week2Fixed" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Week2ShowsTDD" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Week2ShowsTDD" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Week2TDD" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Week2TDD" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />
