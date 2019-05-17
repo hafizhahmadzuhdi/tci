@@ -38,4 +38,12 @@ public class School {
     public void setCourses(List<Course> courses) {
         this.courses = courses;
     }
+
+    public void addCourse(Course a){
+        courses.add(a);
+    }
+
+    public int getCoursesSize(){
+        return this.courses.size();
+    }
 }
