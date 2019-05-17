@@ -35,4 +35,9 @@ public class SchoolTest {
         assertEquals(1, school.getCoursesSize());
     }
 
+    @Test(expected = SchoolNullException.class)
+    public void shouldThrowSchoolException(){
+        School school2 = new School(null, null);
+    }
+
 }
