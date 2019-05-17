@@ -1,15 +1,19 @@
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import Exception.*;
 
-public class School {
+public class School{
 
     private String name;
     private Date openingDate;
     private List<Course> courses;
 
 
-    public School(String name, Date openingDate){
+    public School(String name, Date openingDate) throws SchoolNullException{
+        if(name == null || openingDate == null){
+            throw new SchoolNullException();
+        }
         this.name = name;
         this.openingDate = openingDate;
         this.courses = new ArrayList<>();

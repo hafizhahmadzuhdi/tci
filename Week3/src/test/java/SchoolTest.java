@@ -19,7 +19,7 @@ public class SchoolTest {
 
 
     @Before
-    public void setUp() throws ParseException, CourseDateException{
+    public void setUp() throws ParseException, CourseDateException, SchoolNullException{
         school = new School("Fontys", formatter.parse("01-01-2005"));
         course = new Course("ANDROID1", formatter.parse("02-05-2019"), formatter.parse("02-07-2019"));
     }
@@ -36,7 +36,7 @@ public class SchoolTest {
     }
 
     @Test(expected = SchoolNullException.class)
-    public void shouldThrowSchoolException(){
+    public void shouldThrowSchoolException() throws SchoolNullException{
         School school2 = new School(null, null);
     }
 
