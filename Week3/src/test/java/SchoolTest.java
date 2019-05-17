@@ -15,13 +15,16 @@ public class SchoolTest {
 
     private School school;
     private Course course;
+    private Course course2;
     SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 
 
     @Before
     public void setUp() throws ParseException, CourseDateException, SchoolNullException{
         school = new School("Fontys", formatter.parse("01-01-2005"));
-        course = new Course("ANDROID1", formatter.parse("02-05-2019"), formatter.parse("02-07-2019"));
+        course = new Course("ANDROID1", formatter.parse("01-05-2019"), formatter.parse("02-07-2019"));
+        course2 = new Course("ANDROID2", formatter.parse("01-01-2004"), formatter.parse("02-07-2019"));
+
     }
 
     @Test
@@ -38,6 +41,11 @@ public class SchoolTest {
     @Test(expected = SchoolNullException.class)
     public void shouldThrowSchoolException() throws SchoolNullException{
         School school2 = new School(null, null);
+    }
+
+    @Test(expected = CourseException.class)
+    public void shouldThrowCourseException(){
+        school.addCourse(course2);
     }
 
 }
