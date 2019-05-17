@@ -13,5 +13,13 @@ import java.text.SimpleDateFormat;
 @RunWith(JUnitParamsRunner.class)
 public class SchoolTest {
 
+    private School school;
+    SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+
+
+    @Before
+    public void setUp(){
+        shcool = new School("Fontys", formatter.parse("01-01-2005"), null);
+    }
 
 }
