@@ -43,9 +43,16 @@ public class School{
         this.courses = courses;
     }
 
-    public void addCourse(Course a) throws CourseException{
+    public void addCourse(Course a) throws CourseException, DuplicateCourseException{
         if(a.getBeforeDate().before(openingDate)){
             throw new CourseException();
+        }
+        if(getCoursesSize()>0){
+            for(int i=0; i<courses.size(); i++){
+                if(a.getClassName() == courses.get(i).getClassName()){
+                    throw new DuplicateCourseException();
+                }
+            }
         }
         courses.add(a);
     }
