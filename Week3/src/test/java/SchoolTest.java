@@ -18,8 +18,8 @@ public class SchoolTest {
 
 
     @Before
-    public void setUp(){
-        shcool = new School("Fontys", formatter.parse("01-01-2005"), null);
+    public void setUp() throws ParseException{
+        school = new School("Fontys", formatter.parse("01-01-2005"));
     }
 
 }
