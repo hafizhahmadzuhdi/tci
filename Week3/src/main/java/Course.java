@@ -1,9 +1,11 @@
+import java.util.Date;
+
 public class Course {
     private String className;
-    private String beforeDate;
-    private String afterDate;
+    private Date beforeDate;
+    private Date afterDate;
 
-    public Course(String className, String beforeDate, String afterDate) {
+    public Course(String className, Date beforeDate, Date afterDate){
         this.className = className;
         this.beforeDate = beforeDate;
         this.afterDate = afterDate;
@@ -13,11 +15,12 @@ public class Course {
         return className;
     }
 
-    public String getBeforeDate() {
+    public Date getBeforeDate() {
         return beforeDate;
     }
 
-    public String getAfterDate() {
+    public Date getAfterDate() {
         return afterDate;
     }
+
 }
