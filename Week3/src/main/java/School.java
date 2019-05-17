@@ -43,7 +43,10 @@ public class School{
         this.courses = courses;
     }
 
-    public void addCourse(Course a){
+    public void addCourse(Course a) throws CourseException{
+        if(a.getBeforeDate().before(openingDate)){
+            throw new CourseException();
+        }
         courses.add(a);
     }
 
