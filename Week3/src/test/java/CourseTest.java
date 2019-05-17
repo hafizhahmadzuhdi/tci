@@ -22,8 +22,8 @@ public class CourseTest {
     private Course courseException;
 
     @Before
-    public void setUp() throws ParseException{
-        course = new Course("ANDROID1", formatter.parse("02-02-2019"), formatter.parse("02-05-209"));
+    public void setUp() throws ParseException, CourseDateException {
+        course = new Course("ANDROID1", formatter.parse("02-05-2019"), formatter.parse("02-07-2019"));
     }
 
     @Test
@@ -32,7 +32,7 @@ public class CourseTest {
     }
 
     @Test(expected = CourseDateException.class)
-    public void shouldThrowAnExceptionDate() throws ParseException{
-        courseException = new Course("ANDROID1", formatter.parse("02-02-2019"), formatter.parse("02-05-209"));
+    public void shouldThrowAnExceptionDate() throws ParseException, CourseDateException {
+        courseException = new Course("Testing", formatter.parse("02-06-2019"), formatter.parse("02-05-209"));
     }
 }

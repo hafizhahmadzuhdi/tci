@@ -7,9 +7,11 @@ public class Course {
     private Date afterDate;
 
     public Course(String className, Date beforeDate, Date afterDate) throws CourseDateException {
-        if(beforeDate.after(afterDate)){
+
+        if(afterDate.before(beforeDate)){
             throw new CourseDateException();
         }
+
         this.className = className;
         this.beforeDate = beforeDate;
         this.afterDate = afterDate;
