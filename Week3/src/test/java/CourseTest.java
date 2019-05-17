@@ -19,7 +19,7 @@ public class CourseTest {
 
     public void constructorShouldGetNameOfCourse(){
         Course course = new Course("ANDROID1", "02-02-2019", "02-05-209");
-        assertEquals("ANDROID1", course.getName());
+        assertEquals("ANDROID1", course.getClassName());
     }
 
 }
