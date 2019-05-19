@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 public class SchoolTest {
 
     private School school;
-    private Course course, course2, course3;
+    private Course course, course2, course3, course4;
     SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 
 
@@ -24,6 +24,7 @@ public class SchoolTest {
         course = new Course("ANDROID1", formatter.parse("01-05-2019"), formatter.parse("02-07-2019"));
         course2 = new Course("ANDROID2", formatter.parse("01-01-2004"), formatter.parse("02-07-2019"));
         course3 = new Course("ANDROID1", formatter.parse("01-01-2019"), formatter.parse("02-07-2019"));
+        course4 = new Course("TCI", formatter.parse("01-05-2019"), formatter.parse("02-07-2019"));
 
     }
 
@@ -59,6 +60,13 @@ public class SchoolTest {
         school.addCourse(course);
         Course myCourse = school.getCourseOnName("ANDROID1");
         assertEquals(myCourse, course);
+    }
+
+    @Test
+    public void shouldGetAllNameListOfCourses() throws CourseException, DuplicateCourseException{
+        school.addCourse(course);
+        school.addCourse(course4);
+        assertNotNull(school.getListAllNamesOfClass());
     }
 
 }
