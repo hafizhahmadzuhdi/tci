@@ -73,4 +73,14 @@ public class School{
         }
         return course;
     }
+
+    public List<String> getListAllNamesOfClass(){
+        List<String> name = new ArrayList<>();
+        if(getCoursesSize()>0){
+            for(Course course: courses){
+                name.add(course.getClassName());
+            }
+        }
+        return name;
+    }
 }
