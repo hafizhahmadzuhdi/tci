@@ -69,4 +69,11 @@ public class SchoolTest {
         assertNotNull(school.getListAllNamesOfClass());
     }
 
+    @Test
+    public void shouldGetCourses() throws CourseException, DuplicateCourseException{
+        school.addCourse(course);
+        school.addCourse(course4);
+        assertNotNull(school.getCourses());
+    }
+
 }
