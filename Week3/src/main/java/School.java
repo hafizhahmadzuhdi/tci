@@ -60,4 +60,17 @@ public class School{
     public int getCoursesSize(){
         return this.courses.size();
     }
+
+    public Course getCourseOnName(String courseName){
+        Course course = null;
+        if(getCoursesSize()>0){
+            for(int i=0; i<courses.size(); i++){
+                if(courses.get(i).getClassName().equalsIgnoreCase(courseName)){
+                    course = courses.get(i);
+                }
+                return course;
+            }
+        }
+        return course;
+    }
 }
