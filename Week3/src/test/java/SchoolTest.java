@@ -23,7 +23,7 @@ public class SchoolTest {
         school = new School("Fontys", formatter.parse("01-01-2005"));
         course = new Course("ANDROID1", formatter.parse("01-05-2019"), formatter.parse("02-07-2019"));
         course2 = new Course("ANDROID2", formatter.parse("01-01-2004"), formatter.parse("02-07-2019"));
-        course3 = new Course("ANDROID2", formatter.parse("01-01-2019"), formatter.parse("02-07-2019"));
+        course3 = new Course("ANDROID1", formatter.parse("01-01-2019"), formatter.parse("02-07-2019"));
 
     }
 
@@ -33,7 +33,7 @@ public class SchoolTest {
     }
 
     @Test
-    public void shouldAddCourseToTheSchool()  throws CourseException{
+    public void shouldAddCourseToTheSchool()  throws CourseException, DuplicateCourseException{
         school.addCourse(course);
         assertEquals(1, school.getCoursesSize());
     }
@@ -44,12 +44,12 @@ public class SchoolTest {
     }
 
     @Test(expected = CourseException.class)
-    public void shouldThrowCourseException() throws CourseException {
+    public void shouldThrowCourseException() throws CourseException, DuplicateCourseException {
         school.addCourse(course2);
     }
 
     @Test(expected = DuplicateCourseException.class)
-    public void shouldThrowDuplicateCourseException() throws CourseException {
+    public void shouldThrowDuplicateCourseException() throws CourseException, DuplicateCourseException {
         school.addCourse(course);
         school.addCourse(course3);
     }
