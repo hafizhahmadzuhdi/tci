@@ -54,4 +54,11 @@ public class SchoolTest {
         school.addCourse(course3);
     }
 
+    @Test
+    public void shouldGetCourseBasedOnName() throws CourseException, DuplicateCourseException{
+        school.addCourse(course);
+        Course myCourse = school.getCourseOnName("ANDROID1");
+        assertEquals(myCourse, course);
+    }
+
 }
